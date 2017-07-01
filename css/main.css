@@ -104,13 +104,14 @@ textarea {
 
 .header {
   height:100%;
-  padding: 40px 60px 0px 60px;
+  padding: 40px 60px 20px 60px;
   background-color: white;
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 250%;
   font-family: 'Merriweather', serif;
+  display:inline;
 }
 
 .section, .section1 {
@@ -130,7 +131,6 @@ vertical-align: top;
 }
 
 .me {
-
 height:30%;
 width:30%;
 border-width: 20px;
@@ -162,7 +162,10 @@ margin-top:0em;
 white-space: pre-line;
 }
 
-
+.fa fa-bars fa-3x {
+float:right;
+position: relative;
+}
 
 
 
