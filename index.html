@@ -27,8 +27,17 @@
         <div class="body">
         <div class="header">
         <h2>biancamika.</h2>
+        <span onclick="nav()" class="nav">
         <i class="fa fa-bars fa-3x"></i>
-        </div>
+      </span>
+      </div>
+      <div id="navi" class="section1">
+        <ul>
+          <li><a href="biancamika.github.io">Index</a></li>
+          <li><a href="biancamika.github.io/portfolio.html">Portfolio</a></li>
+          <li><a href="biancamika.github.io/blog">Blog</a></li>
+        </ul>
+      </div>
         <div class="section">
           <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
     <div class="carousel-cell"><img height=500px src="img/test.jpeg"></div>
@@ -54,7 +63,13 @@
         </center>
         </div>
       </div>
+<script>
+//open
+function nav() {
+document.getElementbyId("drop").classList.toggle("show");
+}
 
+</script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>

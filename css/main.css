@@ -103,9 +103,9 @@ textarea {
 }
 
 .header {
-  height:100%;
   padding: 40px 60px 20px 60px;
   background-color: white;
+  position: relative;
 }
 
 h2 {
@@ -162,11 +162,17 @@ margin-top:0em;
 white-space: pre-line;
 }
 
-.fa fa-bars fa-3x {
-float:right;
-position: relative;
+i {
+  float:right;
 }
 
+span i {
+  color:#222222 !important;
+}
+
+#navi ul {
+  list-style-type:none;
+}
 
 
 
