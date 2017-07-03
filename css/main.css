@@ -210,7 +210,13 @@ a i {
 display:none;
 }
 
+a {
+color:black;
+}
 
+a:visited {
+color: #c7c7c7;
+}
 
 
 
