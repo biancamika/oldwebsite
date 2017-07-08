@@ -230,6 +230,32 @@ a:hover {
   color: #e89794;
 }
 
+/* packery */
+
+.grid {
+  max-width:1300px;
+}
+
+.grid:after {
+  content: '';
+  display:block;
+  clear: both;
+}
+
+/* grid-item */
+
+.grid-item {
+  width: 40%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
 
 
 
