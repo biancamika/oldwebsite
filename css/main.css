@@ -245,8 +245,9 @@ box-sizing:border-box;
 /* grid-item */
 
 .grid-item {
-  width: 350px;
-  height: 550px;
+  background: #ffffff;
+  max-width: 450px;
+  max-height: 550px;
   float: left;
 }
 
@@ -255,10 +256,6 @@ display:block;
 max-width:100%;
 }
 
-.grid-item--height2 {
-width:400%;
-height:400%;
-}
 
 
 /* ==========================================================================
