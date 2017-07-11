@@ -232,10 +232,9 @@ a:hover {
 }
 
 /* packery */
-
-.grid {
-  max-width:1300px;
-}
+ * {
+box-sizing:border-box;
+ }
 
 .grid:after {
   content: '';
@@ -246,16 +245,19 @@ a:hover {
 /* grid-item */
 
 .grid-item {
-  width: 40%;
-}
-
-.grid-item {
+  width: 350px;
+  height: 550px;
   float: left;
 }
 
 .grid-item img {
-  display: block;
-  max-width: 100%;
+display:block;
+max-width:100%;
+}
+
+.grid-item--height2 {
+width:400%;
+height:400%;
 }
 
 

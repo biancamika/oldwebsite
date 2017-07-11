@@ -42,8 +42,8 @@
           <h1> Art </h1>
           <div class="grid">
   <div class="grid-item"><img src="img/evolution.jpg"></div>
+  <div class="grid-item--height2"><img src="img/prime.jpg"></div>
   <div class="grid-item"><img src="img/beauty.png"></div>
-  <div class="grid-item"><img src="img/prime.jpg"></div>
 </div>
         </div>
         <div class="section1">
@@ -53,17 +53,20 @@
         </div>
       </div>
       <script>
-      // external js: packery.pkgd.js, imagesloaded.pkgd.js
+      $('.grid').packery({
+        // external js: packery.pkgd.js, imagesloaded.pkgd.js
 
-// init Packery
-var $grid = $('.grid').packery({
-  itemSelector: '.grid-item',
-  percentPosition: true
+      // init Packery
+      var $grid = $('.grid').packery({
+        itemSelector: '.grid-item',
+        percentPosition: true
+      });
+      // layout Packery after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.packery();
+      });
+
 });
-// layout Packery after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.packery();
-});  
       </script>
       <script>
       //open
