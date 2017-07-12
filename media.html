@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Roboto+Mono" rel="stylesheet">
         <link rel="stylesheet" href="css/flickity.css" media="screen">
         <script src="https://use.fontawesome.com/b174ae36b9.js"></script>
+        <script src="js/packery.pkgd.min.js"></script>
         <script src="js/flickity.pkgd.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -26,7 +27,7 @@
         <!-- Add your site or application content here -->
         <div class="body">
         <div class="header">
-        <h2>biancamika.</h2>
+        <h2><a href="http://biancamika.github.io">biancamika.</a></h2>
         <a href="#" onclick="nav();" id="navicon" class="nav">
          <i class="fa fa-bars fa-3x"></i>
    </a>
@@ -35,18 +36,59 @@
          <ul>
            <li><a href="index.html">HOME</a></li>
            <li><a href="portfolio.html">PORTFOLIO</a></li>
-           <li><a href="biancamika.github.io/blog">BLOG</a></li>
+           <li><a href="http://biancamika.github.io/blog">BLOG</a></li>
          </ul>
      </div>
         <div class="section">
-          <h1> Media </h1>
+          <center>
+          <h1><a href="portfolio.html"> my portfolio. </a></h1>
+          <h3><a href="media.html">MEDIA.</a> <a href="art.html">ART.</a> <a href="photo.html">PHOTO.</a> <a href="video.html">VIDEO.</a>  <a href="school.html">SCHOOL.</a> </h3>
+        </center>
+          <div class="grid" data-packery='{ "itemSelector": ".grid-item", "gutter": 20 }'>
+            <div class="grid-item">
+              <h4>MARIA CLARA</h4>
+              <img src="img/mariaclara.jpg">
+              <p>entry for look and learn art.</p>
+            </div>
+            <div class="grid-item">
+              <h4>DEVSOC PROMO</h4>
+              <img src="img/promo.gif">
+              <p>For recruitment cycle 2017</p>
+            </div>
+            <div class="grid-item">
+              <h4>(VICTOR)IA</h4>
+              <img src="img/victoria.jpg">
+              <p>Contribution to "The Youth is on Fire" Zine.</p>
+            </div>
+            <div class="grid-item">
+              <h4>HEADER</h4>
+              <img src="img/header.png">
+              <p>devsoc ambassador form.</p>
+            </div>
+            </div>
+          </div>
         </div>
         <div class="section1">
           <center>
+            insert instagram, github and twitter
           copyright Bianca Aguilar rip in peace
         </center>
         </div>
       </div>
+      <script>
+      // external js: packery.pkgd.js
+      $('.grid').packery({
+        itemSelector: '.grid-item',
+        gutter: 20
+      });
+      });
+      // layout Packery after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.packery();
+      });
+
+});
+      </script>
       <script>
       //open
       var navi = document.getElementById('navi');
