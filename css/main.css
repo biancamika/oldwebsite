@@ -274,6 +274,14 @@ box-sizing:border-box;
   box-shadow: 5px 5px 0px #c7c7c7;
 }
 
+.grid-item--width {
+width: 50%;
+}
+
+.grid-item--width img {
+width: 50%;
+}
+
 .grid-item img {
 display:block;
 max-width:90%;
