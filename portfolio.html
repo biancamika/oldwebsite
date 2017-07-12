@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Roboto+Mono" rel="stylesheet">
         <link rel="stylesheet" href="css/flickity.css" media="screen">
         <script src="https://use.fontawesome.com/b174ae36b9.js"></script>
+        <script src="js/packery.pkgd.min.js"></script>
         <script src="js/flickity.pkgd.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -26,7 +27,7 @@
         <!-- Add your site or application content here -->
         <div class="body">
         <div class="header">
-        <h2>biancamika.</h2>
+        <h2><a href="http://biancamika.github.io">biancamika.</a></h2>
         <a href="#" onclick="nav();" id="navicon" class="nav">
          <i class="fa fa-bars fa-3x"></i>
    </a>
@@ -35,27 +36,53 @@
          <ul>
            <li><a href="index.html">HOME</a></li>
            <li><a href="portfolio.html">PORTFOLIO</a></li>
-           <li><a href="biancamika.github.io/blog">BLOG</a></li>
+           <li><a href="http://biancamika.github.io/blog">BLOG</a></li>
          </ul>
      </div>
         <div class="section">
           <center>
-          <h1> my portfolio. </h1>
+          <h1><a href="portfolio.html"> my portfolio. </a></h1>
+          <h3><a href="media.html">MEDIA.</a> <a href="art.html">ART.</a> <a href="photo.html">PHOTO.</a> <a href="video.html">VIDEO.</a>  <a href="school.html">SCHOOL.</a> </h3>
         </center>
-          <ul>
-<li><a href="media.html">Media</a></li>
-<li><a href="art.html">Art</a></li>
-<li><a href="photos.html">Photos</a></li>
-<li><a href="code.html">Code</a></li>
-<li><a href="school.html">School</a></li>
-          </ul>
+          <div class="grid" data-packery='{ "itemSelector": ".grid-item", "gutter": 20 }'>
+            <div class="grid-item">
+              <h4>EVOLUTION</h4>
+              <img src="img/evolution.jpg">
+              <p>3rd Place in Look and Learn Art competition (which is both international and online), July 2016.</p>
+            </div>
+            <div class="grid-item">
+              <h4>PRIMARY COLORS</h4>
+              <img src="img/prime.jpg">
+              <p>entry for look and learn art.</p>
+            </div>
+            <div class="grid-item">
+              <h4>BEAUTY + THE BEAST</h4>
+              <img src="img/beauty.png">
+              <p>For twisted fate.</p>
+            </div>
+          </div>
         </div>
         <div class="section1">
           <center>
+            insert instagram, github and twitter
           copyright Bianca Aguilar rip in peace
         </center>
         </div>
       </div>
+      <script>
+      // external js: packery.pkgd.js
+      $('.grid').packery({
+        itemSelector: '.grid-item',
+        gutter: 20
+      });
+      });
+      // layout Packery after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.packery();
+      });
+
+});
+      </script>
       <script>
       //open
       var navi = document.getElementById('navi');
