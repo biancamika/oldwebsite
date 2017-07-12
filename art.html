@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Roboto+Mono" rel="stylesheet">
         <link rel="stylesheet" href="css/flickity.css" media="screen">
         <script src="https://use.fontawesome.com/b174ae36b9.js"></script>
+        <script src="js/packery.pkgd.min.js"></script>
         <script src="js/flickity.pkgd.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -64,12 +65,11 @@
         </div>
       </div>
       <script>
-
-      // init Packery
-      var $grid = $('.grid').packery({
+      // external js: packery.pkgd.js
+      $('.grid').packery({
         itemSelector: '.grid-item',
-        percentPosition: true
-        gutter: 10;
+        gutter: 20
+      });
       });
       // layout Packery after each image loads
       $grid.imagesLoaded().progress( function() {
