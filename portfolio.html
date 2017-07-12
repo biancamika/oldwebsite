@@ -70,9 +70,14 @@
               <img src="img/mariaclara.jpg">
               <p>entry for look and learn art.</p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item grid-item--width2">
               <h4>(VICTOR)IA</h4>
               <img src="img/victoria.jpg">
+              <p>entry for look and learn art.</p>
+            </div>
+            <div class="grid-item">
+              <h4>PROMO</h4>
+              <img src="img/promo.gif">
               <p>entry for look and learn art.</p>
             </div>
           </div>
@@ -85,13 +90,7 @@
         </div>
       </div>
       <script>
-      // external js: packery.pkgd.js
-      $('.grid').packery({
-        itemSelector: '.grid-item',
-        gutter: 20
-        percentPosition: true
-      });
-      });
+
       // layout Packery after each image loads
       $grid.imagesLoaded().progress( function() {
         $grid.packery();
