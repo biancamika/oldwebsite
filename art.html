@@ -40,32 +40,36 @@
      </div>
         <div class="section">
           <center>
-          <h1> my portfolio. </h1>
-          <h3> MEDIA. ART. PHOTO. VIDEO. SCHOOL. </h3>
+          <a href="portfolio.html"><h1> my portfolio. </h1></a>
+          <h3><a href="media.html">MEDIA.</a> <a href="art.html">ART.</a> <a href="photo.html">PHOTO.</a> <a href="video.html">VIDEO.</a>  <a href="school.html">SCHOOL.</a> </h3>
         </center>
-          <div class="grid">
+          <div class="grid" data-packery='{ "itemSelector": ".grid-item", "gutter": 20 }'>
             <div class="grid-item">
-              EVOLUTION
+              <h4>EVOLUTION</h4>
               <img src="img/evolution.jpg">
-              For some international thingy
+              <p>3rd Place in Look and Learn Art competition (which is both international and online), July 2016.</p>
+            </div>
+            <div class="grid-item">
+              <h4>BEAUTY + THE BEAST</h4>
+              <img src="img/beauty.png">
+              <p>For twisted fate.</p>
             </div>
           </div>
         </div>
         <div class="section1">
           <center>
-            insert instagram, github and twitter 
+            insert instagram, github and twitter
           copyright Bianca Aguilar rip in peace
         </center>
         </div>
       </div>
       <script>
-      $('.grid').packery({
-        // external js: packery.pkgd.js, imagesloaded.pkgd.js
 
       // init Packery
       var $grid = $('.grid').packery({
         itemSelector: '.grid-item',
         percentPosition: true
+        gutter: 10;
       });
       // layout Packery after each image loads
       $grid.imagesLoaded().progress( function() {
