@@ -17,13 +17,14 @@
         <script src="https://use.fontawesome.com/b174ae36b9.js"></script>
         <script src="js/packery.pkgd.min.js"></script>
         <script src="js/flickity.pkgd.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <!-- Add your site or application content here -->
         <div class="body">
         <div class="header">
@@ -44,7 +45,7 @@
           <h1><a href="portfolio.html"> my portfolio. </a></h1>
           <h3><a href="media.html">MEDIA.</a> <a href="art.html">ART.</a> <a href="photo.html">PHOTO.</a> <a href="school.html">SCHOOL.</a> </h3>
         </center>
-          <div class="grid" data-packery='{ "itemSelector": ".grid-item", "gutter": 20 }'>
+          <div class="grid">
             <div class="grid-item">
               <h4>PRIMARY COLORS</h4>
               <img src="img/prime.jpg">
@@ -170,12 +171,28 @@
         </div>
       </div>
       <script>
-      // layout Packery after each image loads
-      $grid.imagesLoaded().progress( function() {
-        $grid.packery();
-      });
+      var elem = document.querySelector('.grid');
+var pckry = new Packery( elem, {
+  // options
+  itemSelector: '.grid-item',
+  gutter: 20
+});
+
+// layout Packery after each image loads
+imagesLoaded( grid ).on( 'progress', function() {
+pckry.layout();
+});
 
       </script>
+      <script>
+      //isotope
+      $('.grid').isotope({
+  // options
+  itemSelector: '.grid-item',
+  layoutMode: 'fitRows'
+});
+      </script>
+
       <script>
       //open
       var navi = document.getElementById('navi');
