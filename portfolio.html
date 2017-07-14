@@ -18,7 +18,7 @@
         <script src="js/packery.pkgd.min.js"></script>
         <script src="js/flickity.pkgd.min.js"></script>
         <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -177,12 +177,10 @@ var pckry = new Packery( elem, {
   itemSelector: '.grid-item',
   gutter: 20
 });
-
 // layout Packery after each image loads
 imagesLoaded( grid ).on( 'progress', function() {
-pckry.layout();
-});
-
+  pckry.layout();
+});  
       </script>
       <script>
       //isotope
@@ -192,7 +190,6 @@ pckry.layout();
   layoutMode: 'fitRows'
 });
       </script>
-
       <script>
       //open
       var navi = document.getElementById('navi');
