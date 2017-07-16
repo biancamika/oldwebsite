@@ -249,6 +249,14 @@ a:visited {
 color: #c7c7c7;
 }
 
+a:visited i {
+color:black !important;
+}
+
+a:hover i {
+color: #e89794 !important;
+}
+
 a:hover {
   color: #e89794;
 }
