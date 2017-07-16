@@ -352,6 +352,9 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
 font-size:100%;
 }
 
+.section1 i {
+padding: 0px 5px 0px 5px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
