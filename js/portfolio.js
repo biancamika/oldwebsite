@@ -11,11 +11,9 @@ $lg.lightGallery();
 // init Isotope
 $('.grid').isotope({
 // options
+layout: 'packery',
 itemSelector: '.grid-item',
- percentPosition: true,
- masonry: {
- fitWidth: true
-  }
+percentPosition: true
   });
 
  $('a').on( 'click', function() {

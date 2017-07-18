@@ -15,14 +15,14 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Roboto+Mono" rel="stylesheet">
         <link rel="stylesheet" href="css/flickity.css" media="screen">
         <script src="https://use.fontawesome.com/b174ae36b9.js"></script>
-        <script src="js/packery.pkgd.min.js"></script>
+    <!--
         <script src="js/flickity.pkgd.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+        <script src="js/isotope.pkgd.js"></script>
+        <script src="js/packery-mode.pkgd.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script> -->
       <!--  <script src="js\vendor\jquery-1.12.0.min.js"></script>-->
-        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+      <!--  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>-->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="js/portfolio.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -43,7 +43,7 @@
            <li><a href="http://biancamika.github.io/blog">BLOG</a></li>
          </ul>
      </div>
-        <div class="section">
+        <div class="section links">
           <center>
           <h1><a class="port" href="#" data-filter="*"> my portfolio. </a></h1>
           <h3><a class="port" data-filter=".media" href="#">MEDIA.</a> <a class="port" data-filter=".art" href="#">ART.</a> <a class="port" data-filter=".photo" href="#">PHOTO.</a> <a class="port" data-filter=".school" href="#">SCHOOL.</a> </h3>
@@ -187,7 +187,24 @@
         <p>  © Bianca Aguilar 2017 </p>
         </div>
       </div>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+<script src='http://unpkg.com/isotope-packery@2/packery-mode.pkgd.js'></script>
       <script>
+      var $grid = $('.grid').isotope({
+  layoutMode: 'packery',
+  itemSelector: '.grid-item',
+percentPosition: true,
+  packery: {
+  gutter: 20
+}
+});
+
+// filter items on button click
+$('.links').on( 'click', 'a', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
       /*
 var elem = document.querySelector('.grid');
 var pckry = new Packery( elem, {
@@ -199,6 +216,7 @@ var pckry = new Packery( elem, {
 // external js: packery.pkgd.js, imagesloaded.pkgd.js
 
 // init Packery
+/*
 var grid = document.querySelector('.grid');
 var pckry;
 
@@ -211,6 +229,7 @@ imagesLoaded( grid, function() {
   });
 });
 
+*/
       </script>
       <!--
       <script>
