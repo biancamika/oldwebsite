@@ -190,6 +190,7 @@
       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 <script src='http://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
 <script src='http://unpkg.com/isotope-packery@2/packery-mode.pkgd.js'></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
       <script>
       var $grid = $('.grid').isotope({
   layoutMode: 'packery',
@@ -198,6 +199,11 @@ percentPosition: true,
   packery: {
   gutter: 20
 }
+});
+
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
 });
 
 // filter items on button click
