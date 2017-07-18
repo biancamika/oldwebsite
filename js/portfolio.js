@@ -17,6 +17,7 @@ itemSelector: '.grid-item',
  fitWidth: true
   }
   });
+
  $('a').on( 'click', function() {
  var filterValue = $(this).attr('data-filter');
   $('.grid').isotope({ filter: filterValue });
